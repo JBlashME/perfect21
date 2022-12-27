@@ -25,12 +25,33 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: green;
-  color: red;
+  background-color: lightgray;
+  color: black;
+  text-align: center;
 }
 
 .card {
   padding: 0px 0px;
   font-size: 16px;
   font-weight: bold;
+}
+.row{
+  padding: 20px;
+}
+.row_game{
+  padding: 20px;
+}
+.col_top{
+  text: center;
+  height: 50px;
+}
+.btn_game{
+  text-align: center;
+  position: relative;
+  display: inline;
+  --bs-success: #20da84;
+  --bs-success-rgb: 32,218,132;
+  padding: 6px;
+  margin: 5px;
+  width: 75px;
 }
