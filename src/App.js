@@ -1,5 +1,20 @@
 
 import "./App.css";
+import CardsWrapper from "./components/CardsWrapper";
+
+function App() {
+  return (
+    <div className="App">
+      <CardsWrapper cardsNumber="5" />
+      <button onClick={() => window.location.reload()}>Reload Cards</button>
+    </div>
+  );
+}
+
+export default App;
+
+
+
 // // import CardsWrapper from "./components/CardsWrapper";
 
 // // function App() {
@@ -101,46 +116,46 @@ import "./App.css";
 // export default HomePage;
 
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-function DealCard() {
-  // state to store the deck of cards
-  const [deck, setDeck] = useState([
-    { suit: '♠️', value: 'A' },{ suit: '♠️', value: 2 },{ suit: '♠️', value: 3 },{ suit: '♠️', value: 4 },{ suit: '♠️', value: 5 },{ suit: '♠️', value: 6 },{ suit: '♠️', value: 7 },{ suit: '♠️', value: 8 },{ suit: '♠️', value: 9 },{ suit: '♠️', value: 10 },{ suit: '♠️', value: 'J' },{ suit: '♠️', value: 'Q' },{ suit: '♠️', value: 'k' },
-    { suit: '♥️', value: 'A' },{ suit: '♥️', value: 2 },{ suit: '♥️', value: 3 },{ suit: '♥️', value: 4 },{ suit: '♥️', value: 5 },{ suit: '♥️', value: 6 },{ suit: '♥️', value: 7 },{ suit: '♥️', value: 8 },{ suit: '♥️', value: 9 },{ suit: '♥️', value: 10 },{ suit: '♥️', value: 'J' },{ suit: '♥️', value: 'Q' },{ suit: '♥️', value: 'k' },
-    { suit: '♦️', value: 'A' },{ suit: '♦️', value: 2 },{ suit: '♦️', value: 3 },{ suit: '♦️', value: 4 },{ suit: '♦️', value: 5 },{ suit: '♦️', value: 6 },{ suit: '♦️', value: 7 },{ suit: '♦️', value: 8 },{ suit: '♦️', value: 9 },{ suit: '♦️', value: 10 },{ suit: '♦️', value: 'J' },{ suit: '♦️', value: 'Q' },{ suit: '♦️', value: 'k' },
-    { suit: '♣️', value: 'A' },{ suit: '♣️', value: 2 },{ suit: '♣️', value: 3 },{ suit: '♣️', value: 4 },{ suit: '♣️', value: 5 },{ suit: '♣️', value: 6 },{ suit: '♣️', value: 7 },{ suit: '♣️', value: 8 },{ suit: '♣️', value: 9 },{ suit: '♣️', value: 10 },{ suit: '♣️', value: 'J' },{ suit: '♣️', value: 'Q' },{ suit: '♣️', value: 'k' },
-  ]);
+// function DealCard() {
+//   // state to store the deck of cards
+//   const [deck, setDeck] = useState([
+//     { suit: '♠️', value: 'A' },{ suit: '♠️', value: 2 },{ suit: '♠️', value: 3 },{ suit: '♠️', value: 4 },{ suit: '♠️', value: 5 },{ suit: '♠️', value: 6 },{ suit: '♠️', value: 7 },{ suit: '♠️', value: 8 },{ suit: '♠️', value: 9 },{ suit: '♠️', value: 10 },{ suit: '♠️', value: 'J' },{ suit: '♠️', value: 'Q' },{ suit: '♠️', value: 'k' },
+//     { suit: '♥️', value: 'A' },{ suit: '♥️', value: 2 },{ suit: '♥️', value: 3 },{ suit: '♥️', value: 4 },{ suit: '♥️', value: 5 },{ suit: '♥️', value: 6 },{ suit: '♥️', value: 7 },{ suit: '♥️', value: 8 },{ suit: '♥️', value: 9 },{ suit: '♥️', value: 10 },{ suit: '♥️', value: 'J' },{ suit: '♥️', value: 'Q' },{ suit: '♥️', value: 'k' },
+//     { suit: '♦️', value: 'A' },{ suit: '♦️', value: 2 },{ suit: '♦️', value: 3 },{ suit: '♦️', value: 4 },{ suit: '♦️', value: 5 },{ suit: '♦️', value: 6 },{ suit: '♦️', value: 7 },{ suit: '♦️', value: 8 },{ suit: '♦️', value: 9 },{ suit: '♦️', value: 10 },{ suit: '♦️', value: 'J' },{ suit: '♦️', value: 'Q' },{ suit: '♦️', value: 'k' },
+//     { suit: '♣️', value: 'A' },{ suit: '♣️', value: 2 },{ suit: '♣️', value: 3 },{ suit: '♣️', value: 4 },{ suit: '♣️', value: 5 },{ suit: '♣️', value: 6 },{ suit: '♣️', value: 7 },{ suit: '♣️', value: 8 },{ suit: '♣️', value: 9 },{ suit: '♣️', value: 10 },{ suit: '♣️', value: 'J' },{ suit: '♣️', value: 'Q' },{ suit: '♣️', value: 'k' },
+//   ]);
 
-  // state to store the cards that have already been dealt
-  const [dealtCards, setDealtCards] = useState([]);
+//   // state to store the cards that have already been dealt
+//   const [dealtCards, setDealtCards] = useState([]);
 
-  // handler for the "Deal Card" button click event
-  function handleDealCard() {
-    // if there are no more cards in the deck, return
-    if (deck.length === 0) {
-      return;
-    }
+//   // handler for the "Deal Card" button click event
+//   function handleDealCard() {
+//     // if there are no more cards in the deck, return
+//     if (deck.length === 0) {
+//       return;
+//     }
 
-    // choose a random card from the deck
-    const randomIndex = Math.floor(Math.random() * deck.length);
-    const card = deck[randomIndex];
+//     // choose a random card from the deck
+//     const randomIndex = Math.floor(Math.random() * deck.length);
+//     const card = deck[randomIndex];
 
-    // remove the card from the deck and add it to the dealt cards
-    setDeck(deck.filter((_, i) => i !== randomIndex));
-    setDealtCards([...dealtCards, card]);
-  }
+//     // remove the card from the deck and add it to the dealt cards
+//     setDeck(deck.filter((_, i) => i !== randomIndex));
+//     setDealtCards([...dealtCards, card]);
+//   }
 
-  return (
-    <div className="deal-card">
-      <button class="button" onClick={handleDealCard} >Deal Card</button>
-      <div>
-        <strong>Cards Dealt:</strong>
-        {dealtCards.map((card, index) => (
-          <div class="card" style={{ color: card.suit  === '♥️' || card.suit  === '♦️' ? 'red' : 'black' }}key={index}>{card.value} {card.suit}</div>
-        ))}
-      </div>
-    </div>
-  );
-}
-export default DealCard;
+//   return (
+//     <div className="deal-card">
+//       <button class="button" onClick={handleDealCard} >Deal Card</button>
+//       <div>
+//         <strong>Cards Dealt:</strong>
+//         {dealtCards.map((card, index) => (
+//           <div class="card" style={{ color: card.suit  === '♥️' || card.suit  === '♦️' ? 'red' : 'black' }}key={index}>{card.value} {card.suit}</div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+// export default DealCard;

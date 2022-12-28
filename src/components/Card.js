@@ -8,7 +8,7 @@ const Card = ({ number, color, symbol, name }) => {
       <div className={`card-content__inner ${name}`}>
         <div className={`card-content-inner__border-top ${color}`}>
           <div className="top-symbol ">
-            <BorderCardFigureConditions number={number} />
+            <BorderCardFigureConditions number={number} flip={true} />
             <span className="top-symbol-sigle">{symbol}</span>
           </div>
           <div />
@@ -29,3 +29,4 @@ const Card = ({ number, color, symbol, name }) => {
 };
 
 export default Card;
+
