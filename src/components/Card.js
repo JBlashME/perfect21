@@ -19,7 +19,7 @@ const Card = ({ number, color, symbol, name }) => {
         <div className={`card-content-inner__border-bottom ${color}`}>
           <div />
           <div className="bottom-symbol ">
-            <span className="bottom-symbol-sigle">{symbol}</span>
+            <span className="bottom-symbol-sigle rotate-flip">{symbol}</span>
             <BorderCardFigureConditions number={number} />
           </div>
         </div>

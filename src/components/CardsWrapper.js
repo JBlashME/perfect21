@@ -7,6 +7,7 @@ const CardsWrapper = ({ cardsNumber }) => {
   const { randomValueFromArray } = useRandomValueFromArray();
 
   return (
+    
     <div className="card-wrapper">
       {[...Array(Number(cardNumbers))].map((_numb, index) => {
         index += 1;

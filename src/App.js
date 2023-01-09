@@ -1,11 +1,15 @@
 
 import "./App.css";
 import CardsWrapper from "./components/CardsWrapper";
+import DealerHand from "./components/DealerHand";
 
 function App() {
   return (
+    
     <div className="App">
-      <CardsWrapper cardsNumber="5" />
+      <DealerHand />
+      <p>test </p>
+      <CardsWrapper cardsNumber="4" />
       <button onClick={() => window.location.reload()}>Reload Cards</button>
     </div>
   );

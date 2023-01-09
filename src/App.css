@@ -146,7 +146,7 @@
 }
 .grid-7 .centerCard:last-child {
   position: absolute;
-  transform: translate(80px, -20px);
+  transform: translate(4.2rem, -20px);
 }
 .grid-8 {
   transform: scale(0.9) translate(0, -3.4rem);
@@ -193,4 +193,11 @@ button {
 button:hover {
   background-color: #fff;
   color: #444;
+}
+#dealer-hand {
+  position:relative
+}
+.upcard {
+  position:absolute;
+  left:75px;
 }
