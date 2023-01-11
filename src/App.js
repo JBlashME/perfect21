@@ -2,6 +2,8 @@
 import "./App.css";
 import CardsWrapper from "./components/CardsWrapper";
 import DealerHand from "./components/DealerHand";
+import PlayerHand from "./components/PlayerHand"
+import Deck from "./components/Deck"
 
 function App() {
   return (
@@ -9,8 +11,11 @@ function App() {
     <div className="App">
       <DealerHand />
       <p>test </p>
-      <CardsWrapper cardsNumber="4" />
-      <button onClick={() => window.location.reload()}>Reload Cards</button>
+      <DealerHand />
+      <p> another break</p>
+      <PlayerHand />
+      <p>asdf</p>
+      <Deck />
     </div>
   );
 }
