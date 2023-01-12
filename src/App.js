@@ -5,15 +5,14 @@ import DealerHand from "./components/DealerHand";
 import PlayerHand from "./components/PlayerHand"
 import Deck from "./components/Deck"
 
+
 function App() {
   return (
     
     <div className="App">
       <DealerHand />
-      <p>test </p>
-      <DealerHand />
       <p> another break</p>
-      <PlayerHand />
+      {/* <PlayerHand /> */}
       <p>asdf</p>
       <Deck />
     </div>

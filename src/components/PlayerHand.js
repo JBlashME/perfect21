@@ -1,5 +1,6 @@
 import React from 'react'
 import back from "./CardSVG/back.svg"
+import RetrieveCard from "./RetrieveCard"
 
 class  PlayerHand extends React.Component {
   // const cardVar = 'Kd'
@@ -8,25 +9,28 @@ class  PlayerHand extends React.Component {
     this.state = {  
       count: 0,
       cards: [],
-      split: false
+      split: false,
+      hasAce: 0,
+      aceCount: [0,0]
       }  
     this.hit = this.hit.bind(this);  
   }
   hit(){
-    const randomIndex = Math.floor(Math.random() * 52);
-    this.state.count = this.state.count + randomIndex;
-    this.state.cards = this.state.cards.concat([randomIndex]);
-    console.log(this.state.count, this.state.cards);
+    this.state.count = this.state.count + 1;
+    this.state.cards = this.state.cards.concat([this.props.currentCard]);
+    console.log(this.state.count, this.state.cards, this.props.currentCard);
   }
 
   render() {
   return (
     <div >
     <div id='dealer-hand'>
-      <img src={back} alt="React Logo" />
+      {/* <img src={back} alt="React Logo" /> */}
+      <RetrieveCard card={this.props.currentCard}/>
       
     </div>
-    <button onClick={this.hit}>Change Hand Values</button> 
+    <p> {this.props.currentCard} adsf</p>
+    <button onClick={this.hit()}>HIT</button> 
     </div>
 
   );
