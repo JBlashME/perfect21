@@ -19,13 +19,13 @@ class  DealerHand extends React.Component {
       this.setState({
         index:0 
       })
-      console.log(this.props,this.state.cardVar[this.state.index]);  
+      // console.log(this.props,this.state.cardVar[this.state.index]);  
     } else {
       this.setState({
         index: this.state.index + 1
         })
       } 
-      console.log(this.props,this.state.cardVar[this.state.index]);  
+      // console.log(this.props,this.state.cardVar[this.state.index]);  
     }
 
   render() {

@@ -52,9 +52,9 @@ import JackOfSpades from "./CardSVG/JackOfSpades.svg";
 import QueenOfSpades from "./CardSVG/QueenOfSpades.svg";
 import KingOfSpades from "./CardSVG/KingOfSpades.svg";
 import AceOfSpades from "./CardSVG/AceOfSpades.svg";
+import back from "./CardSVG/back.svg";
 
-
-const cards = {
+const cardsDefs = {
   '2c': [Clubs2,'2'],
   '3c': [Clubs3,'3'],
   '4c': [Clubs4,'4'],
@@ -107,6 +107,13 @@ const cards = {
   'Qs': [QueenOfSpades,'10'],
   'Ks': [KingOfSpades,'10'],
   'As': [AceOfSpades,'A'],
+  'back':[back,'back']
+}
+
+export function  cardValue (card) {
+  return(
+    cardsDefs[card][1]
+  )
 }
 
 const RetrieveCard = ({card,back}) => {
@@ -116,9 +123,8 @@ const RetrieveCard = ({card,back}) => {
         <img src={back} />
       )
     } else {
-      console.log(cards[card][1])
       return (
-        <img class="upcard" src={cards[card][0]} />
+        <img class="upcard" src={cardsDefs[card][0]} />
         
       )
     }

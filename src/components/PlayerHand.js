@@ -1,5 +1,5 @@
 import React from 'react'
-import back from "./CardSVG/back.svg"
+
 import RetrieveCard from "./RetrieveCard"
 
 class  PlayerHand extends React.Component {
@@ -18,7 +18,7 @@ class  PlayerHand extends React.Component {
   hit(){
     this.state.count = this.state.count + 1;
     this.state.cards = this.state.cards.concat([this.props.currentCard]);
-    console.log(this.state.count, this.state.cards, this.props.currentCard);
+    // console.log(this.state.count, this.state.cards, this.props.currentCard);
   }
 
   render() {
